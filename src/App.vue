@@ -24,7 +24,7 @@
 
 nav {
   padding: 30px;
-  background: #f45d8c;
+  background: #f45d8c; 
 }
 
 nav a {

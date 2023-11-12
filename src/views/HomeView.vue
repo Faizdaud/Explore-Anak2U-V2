@@ -4,22 +4,22 @@
     <div class="senarai-tadika-container">
    
       <div class="image-container2">
-      <h2 class="combined-heading">SENARAI TADIKA <span class="pilihan">PILIHAN ANAK2U</span></h2>
+      <h4 class="combined-heading">SENARAI TADIKA <span class="pilihan">PILIHAN ANAK2U</span></h4>
     
     <p class="huraian">Senarai tadika yang berdaftar dengan Kami</p>
       </div> 
-    <div class="senarai-tadika d-flex justify-content-center">
+    <div class=" d-flex justify-content-center">
     <div class="swiper-container d-flex justify-content-center" id="carousel" >
-      <div class="col-6 swiper-wrapper" >
-        <div v-for="(item, index) in items" :key="index" class="swiper-slide" style="height: 290px;">
+      <div class="col-6 swiper-wrapper">
+        <div v-for="(item, index) in items" :key="index" class="swiper-slide" style="height: 290px;width: 220px;">
           <div class="item">
             <div class="thumb-wrapper">
               <img :src="item.logo_url || defaultLogoUrl" alt="Kindergarten Logo" style="width: 120px; height: 120px;" />
             </div>
             <div class="kindergarten-info">
-              <div class="buttons`">
+              <div class="buttons">
                 <button class="btn see-more" @click="redirectToDetailsPage(item.client_slug)">Details</button>
-                <button class="btn register" style="margin-left: 50px;" @click="redirectToRegisterPage(item.client_slug)">Register</button>
+                <button class="btn register" style="margin-left: 20px;" @click="redirectToRegisterPage(item.client_slug)">Register</button>
               </div>
               <div class="info">
                 <h5 class="kindergarten-name">{{ item.client_name }}</h5>
@@ -31,6 +31,25 @@
             </div>
           </div>
         </div>
+        <!-- <div v-for="(item, index) in items" :key="index" class="swiper-slide">
+          <div class="thumb-wrapper">
+              <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+              <div class="img-box">
+                <img :src="item.logo_url || defaultLogoUrl" class="img-responsive img-fluid" style="object-fit: contain;" alt="Kindergarten Logo">
+              </div>
+
+              <div class="buttons">
+                <button class="btn see-more" @click="redirectToDetailsPage(item.client_slug)">Details</button>
+                <button class="btn register" style="margin-left: 20px;" @click="redirectToRegisterPage(item.client_slug)">Register</button>
+              </div>
+
+              <div class="thumb-content" style="object-fit: contain;">
+                <h4 style="display: block">{{item.client_name}}</h4>
+                <p class="item-price">Harga Yuran sekitar <br/>
+                <strong>{{ item.client_fee !== null ? 'RM' + item.client_fee : 'RM -' }}</strong></p>
+              </div>
+            </div>
+        </div> -->
       </div>
 
       <div class="swiper-pagination" style="text-align: center;"></div>
@@ -38,6 +57,116 @@
   </div>
     </div><!--pengakhiran senarai tadika-->
 
+    <section id="feature-anak2u" class="feature feature-1 text-center bg-white pb-90">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="heading heading-2 text-center mb-70">
+          <h2 class="heading--title">Apa itu Tadika Taska Pilihan Anak2U?</h2>
+          <p class="heading--desc">Tadika pilihan Anak2U menggunakan aplikasi dan sistem pengurusan Anak2U. Aplikasi dan sistem kami membolehkan ibu-bapa mempunyai akses ke:</p>
+        </div>
+        <!-- .heading-title end -->
+      </div>
+      <!-- .col-md-12 end -->
+    </div>
+    <!-- .row end -->
+    <div class="row">
+      <!-- feature Panel #1 -->
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="feature-panel">
+          <div class="feature--icon">
+            <!-- <span style="font-size: 72px;color: rgb(75,165,158);"><i class="fa fa-mobile"></i></span> -->
+            <img src="@/assets/images/laporan digital.png" alt="Image 1">
+
+          </div>
+          <div class="feature--content">
+            <h3>Laporan Digital</h3>
+            <p>Laporan perkembangan secara digital. Terus pantau perkembangan anak-anak melalui aplikasi Anak2U</p>
+          </div>
+        </div>
+        <!-- .feature-panel end -->
+      </div>
+      <!-- .col-md-4 end -->
+      <!-- feature Panel #2 -->
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="feature-panel">
+          <div class="feature--icon">
+            <img src="@/assets/images/pembayaran.png" alt="Image 2">
+          </div>
+          <div class="feature--content">
+            <h3>Pembayaran mudah</h3>
+            <p>Pembayaran yuran atas talian yang lebih mudah melalui aplikasi Anak2U. Invois dan resit terus didapati di dalam aplikasi.</p>
+          </div>
+        </div>
+        <!-- .feature-panel end -->
+      </div>
+      <!-- .col-md-4 end -->
+      <!-- feature Panel #3 -->
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="feature-panel">
+          <div class="feature--icon">
+            <img src="@/assets/images/pembelajaran digital.png" alt="Image 4">
+          </div>
+          <div class="feature--content">
+            <h3>Pembelajaran Digital lebih menarik</h3>
+            <p>Akses ke aplikasi pembelajaran alaf baru digital yang lebih menarik untuk perkembangan pembelajaran anak-anak di rumah.</p>
+          </div>
+        </div>
+        <!-- .feature-panel end -->
+      </div>
+      <!-- .col-md-4 end -->
+    </div>
+    <div class="row" style="margin-top: 32px">
+      <!-- feature Panel #1 -->
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="feature-panel">
+          <div class="feature--icon">
+            <!-- <span style="font-size: 72px;color: rgb(75,165,158);"><i class="fa fa-bullhorn"></i></span> -->
+            <img src="@/assets/images/komunikasi.png" alt="Image 3">
+          </div>
+          <div class="feature--content">
+            <h3>Komunikasi mudah</h3>
+            <p>Komunikasi antara ibu-bapa dan guru yang lebih mudah dan telus melalui fungsi pengumuman aplikasi Anak2U.</p>
+          </div>
+        </div>
+        <!-- .feature-panel end -->
+      </div>
+      
+      <!-- .col-md-4 end -->
+      <!-- feature Panel #2 -->
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="feature-panel">
+          <div class="feature--icon">
+            <img src="@/assets/images/pengurusan.png" alt="Image 5">
+          </div>
+          <div class="feature--content">
+            <h3>Pengurusan lebih teratur</h3>
+            <p>Tadika dan taska mempunyai pengurusan yang lebih teratur melalui sistem pengurusan Anak2U, solusi alaf baru secara 'paperless'</p>
+          </div>
+        </div>
+        <!-- .feature-panel end -->
+      </div>
+      <!-- .col-md-4 end -->
+      <!-- feature Panel #3 -->
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="feature-panel">
+          <div class="feature--icon">
+            <img src="@/assets/images/akses bahan.png" alt="Image 6">
+          </div>
+          <div class="feature--content">
+            <h3>Akses bahan pengajaran</h3>
+            <p>Guru dan ibu-bapa mempunyai akses bahan pengajaran dan pembelajaran Anak2U, didikan awal tidak berhenti di sekolah sahaja.</p>
+          </div>
+        </div>
+        <!-- .feature-panel end -->
+      </div>
+      <!-- .col-md-4 end -->
+    </div>
+    <!-- .row end -->
+  </div>
+  <!-- .container end -->
+</section>
+<!-- 
   <div class="apa-itu-tadika-container">
       <div class="image-container2">
       <h2 class="combined-heading">APA ITU TADIKA TASKA <span class="pilihan">PILIHAN ANAK2U</span></h2>
@@ -102,33 +231,75 @@
       </div>
 
 
-    </div><!--pengakhiran untuk apa itu tadika-->
+    </div> -->
+    <!--pengakhiran untuk apa itu tadika-->
 
-
-      <div class="kaedah-container">
-        <h3>KAEDAH PENGGUNAAN</h3>
-        
-        <p class="huraian">Terdapat 3 kaedah penggunaan sepertimana di bawah :</p>
-        <div class="image-wrapper">
-          <div class="image-item">
-            <img src="@/assets/images/cari tadika.png" alt="Image 1" />
-            <h4 class="tittle-kaedah">Cari Tadika</h4>
-            <p>Cari tadika yang anda berminat melalui website kami</p>
+    <section id="feature" class="feature feature-1 text-center pb-90" style="background-color:#f1f6fc">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="heading heading-2 text-center mb-70">
+          <h2 class="heading--title">Kaedah Penggunaan</h2>
+          <p class="heading--desc">Terdapat 3 kaedah penggunaan sepertimana di bawah:</p>
+        </div>
+        <!-- .heading-title end -->
+      </div>
+      <!-- .col-md-12 end -->
+    </div>
+    <!-- .row end -->
+    <div class="row">
+      <!-- feature Panel #1 -->
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="feature-panel">
+          <div class="feature--icon">
+            <img src="@/assets/images/cari tadika.png" alt="Anak2U carian tadika dan taska">
           </div>
-          <div class="connector-line"></div> <!-- Add a line here -->
-          <div class="image-item">
-            <img src="@/assets/images/lihat tadika.png" alt="Image 2" />
-            <h4 class="tittle-kaedah" >Lihat Tadika</h4>
-            <p>Lihat maklumat lanjut tentang tadika yang anda pilih</p>
-          </div>
-          <div class="connector-line"></div> <!-- Add a line here -->
-          <div class="image-item bigger-width">
-            <img src="@/assets/images/daftar tadika.png" alt="Image 3" />
-            <h4 class="tittle-kaedah">Daftar Tadika / Taska pilihan</h4>
-            <p>Daftar tadika dan taska pilihan anda. Pihak tadika dan taska akan menghubungi pihak anda untuk maklum balas mengenai pendaftaran anda</p>
+          <div class="feature--content">
+            <h3>Cari Tadika</h3>
+            <p>Cari tadika yang anda berminat melalui website kami di sini</p>
           </div>
         </div>
+        <!-- .feature-panel end -->
       </div>
+      <!-- .col-md-4 end -->
+      <!-- feature Panel #2 -->
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="feature-panel">
+          <div class="feature--icon">
+            <img src="@/assets/images/lihat tadika.png" alt="Anak2U carian tadika taska anda">
+          </div>
+          <div class="feature--content">
+            <h3>Lihat Tadika</h3>
+            <p>Lihat maklumat lanjut tentang tadika yang anda pilih</p>
+          </div>
+        </div>
+        <!-- .feature-panel end -->
+      </div>
+      <!-- .col-md-4 end -->
+      <!-- feature Panel #3 -->
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <div class="feature-panel">
+          <div class="feature--icon">
+            <img src="@/assets/images/daftar tadika.png" alt="Anak2U carian tadika taska anda">
+          </div>
+          <div class="feature--content">
+            <h3>Daftar tadika / taska pilihan</h3>
+            <p>Daftar tadika dan taska pilihan anda. Pihak tadika dan taska akan menghubungi pihak anda untuk maklum balas mengenai pendaftaran anda.</p>
+          </div>
+        </div>
+        <!-- .feature-panel end -->
+      </div>
+      <!-- .col-md-4 end -->
+    </div>
+    <!-- .row end -->
+  </div>
+  <!-- .container end -->
+</section>
+<!-- .feature end -->
+    
+
+
+    
     <Footer/>
   </section>
 
@@ -203,6 +374,7 @@ export default {
 body, h1, h2, h3, p {
       margin: 0;
       padding: 0;
+
     }
 
   .senarai-tadika-container {
@@ -309,6 +481,8 @@ Hide the numbers in pagination
 .buttons {
   text-align: center;
   margin-top: 10px;
+  padding-bottom: 0%;
+  height: 50px;
 
 }
 
@@ -317,8 +491,8 @@ Hide the numbers in pagination
 }
 .kindergarten-info h5 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
-  color: #333;
+  font-size: 18px;
+  color: #ffffff;
   font-weight: 300;
   text-align: center;
 }
@@ -327,7 +501,7 @@ Hide the numbers in pagination
 .kindergarten-info h6 {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  color: #333;
+  color: #ffffff;
   font-weight: 500;
   text-align: center;
   margin: 5px 0;
@@ -343,6 +517,8 @@ Hide the numbers in pagination
       font-weight: 700;
       font-size: 12px;
       margin-bottom: 45px;
+      width: 60px;
+      background-color: green;
     }
     
     .see-more {

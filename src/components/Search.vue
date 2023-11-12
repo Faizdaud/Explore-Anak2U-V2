@@ -1,23 +1,27 @@
+
+
 <template>
-<div class="banner-container">
-  <div class="banner" >
+  <div class="banner-container">
     <section class="senarai-tadika">
-      <div class="container">
-        <select v-model="selectedState" id="stateSelect">
-          <option disabled value="">Pilih negeri</option>
-          <option v-for="state in states" :key="state.id" :value="state">{{ state.city }}</option>
-        </select>
-        <button id="searchButton" @click="searchTadika">Carian</button>
-        <div id="result">
-          <!-- Result will be displayed here -->
-          <!-- <p v-if="selectedState">Selected State ID: {{ selectedState }}</p> -->
-          <!-- You can display more results here as needed -->
+        <div class="container">
+          <select v-model="selectedState" id="stateSelect">
+            <option disabled value="">Pilih negeri</option>
+            <option v-for="state in states" :key="state.id" :value="state">{{ state.city }}</option>
+          </select>
+          <button id="searchButton" @click="searchTadika">Carian</button>
+
         </div>
-      </div>
-    </section>
-  </div>
-  </div>
-</template>
+      </section>
+    <div class="banner" >
+
+      <div id="result">
+            <!-- Result will be displayed here -->
+            <!-- <p v-if="selectedState">Selected State ID: {{ selectedState }}</p> -->
+            <!-- You can display more results here as needed -->
+          </div>
+    </div>
+    </div>
+  </template>
 
 
 <script>
@@ -82,6 +86,7 @@ export default {
   position: relative;
   background-color: #01A099; /* Set the desired background color here */
   overflow: hidden;
+  margin-top: -100px;
 }
 
 .banner {
@@ -91,6 +96,7 @@ export default {
   background-position: center top;
   height: 500px; /* Adjusted to fill the container */
   width: 100%; /* Adjusted to fill the container */
+  margin-top: -100px;
 }
 
 .senarai-tadika {
@@ -98,7 +104,8 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 300px;
+  height: 50px;
+  background-color: #FFDD14;
 }
 
 select {
