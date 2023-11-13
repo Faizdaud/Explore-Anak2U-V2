@@ -26,7 +26,7 @@
                   <!-- <li><a href="#">Career</a></li> -->
                   <li><a href="https://explore.anak2u.com.my/">Explore</a></li>
                   <!-- <li><a href="#">Properties</a></li> -->
-                  <li><a href="https://api.whatsapp.com/send?phone=601158613929text=Hi, saya ada pertanyaan mengenai laman web Explore Anak2U.source=Websitedata=">Hubungi Anak2U</a></li>
+                  <li><a href="https://api.whatsapp.com/send?phone=601158613929&text=Hi, saya ada pertanyaan mengenai laman web Explore Anak2U.&source=Website&data=">Hubungi Anak2U</a></li>
                 </ul>
               </div>
             </div>
@@ -37,7 +37,7 @@
               </div>
               <div class="widget--content">
                 <ul id="link" class="list-unstyled mb-0">
-                  <li><a href="https://anak2u.com.my/polisi-privasi/">Notis Privasi</a></li>
+                  <li><a href="https://anak2u.com.my/ms/dasar-privasi/">Notis Privasi</a></li>
                   <li><a href="https://anak2u.com.my/terma/">Terma dan Syarat</a></li>
                   <li><a href="https://www.facebook.com/anak2uofficial/">Media Sosial</a></li>
                   <li><a href="https://anak2u.com.my/soalan-lazim/">Soalan Lazim</a></li>
