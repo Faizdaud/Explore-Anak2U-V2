@@ -8,7 +8,7 @@
           
         </div>
       </modal>
-      <div class="senarai-tadika">
+      <div class="senarai-tadika" style="background-color: #F1F6FC">
         <div class="container">
           <div class="lists-container">
             <ul class="district-list" ref="districtList">
