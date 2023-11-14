@@ -1,7 +1,7 @@
 <template>
   <section>
     <Search />
-    <div class="senarai-tadika-container" >
+    <div class="senarai-tadika-container">
 
       <div class="image-container2">
         <!-- <h4 class="combined-heading">SENARAI TADIKA <span class="pilihan">PILIHAN ANAK2U</span></h4> -->
@@ -10,9 +10,9 @@
       </div>
       <div class=" d-flex justify-content-center">
         <div class="swiper-container d-flex justify-content-center" id="carousel">
-          <div class="col-6 swiper-wrapper">
-            <div v-for="(item, index) in items" :key="index" class="swiper-slide" style="height: 290px;width: 220px;">
-              <div class="item">
+          <div class="col-12 swiper-wrapper">
+            <div v-for="(item, index) in items.data" :key="index" class="swiper-slide" style="background: linear-gradient(to bottom, white 65%, #eb5a8c 35%);width: 150px;">
+              <!-- <div class="item">
                 <div class="thumb-wrapper">
                   <img :src="item.logo_url || defaultLogoUrl" alt="Kindergarten Logo"
                     style="width: 120px; height: 120px;" />
@@ -31,27 +31,27 @@
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <!-- <div v-for="(item, index) in items" :key="index" class="swiper-slide">
-          <div class="thumb-wrapper">
-              <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
-              <div class="img-box">
-                <img :src="item.logo_url || defaultLogoUrl" class="img-responsive img-fluid" style="object-fit: contain;" alt="Kindergarten Logo">
-              </div>
+              </div> -->
+              <!-- <div class="thumb-wrapper"> -->
+                <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                <div class="img-box">
+                  <img :src="item.logo_url" class="img-responsive img-fluid" style="object-fit: contain;" alt="">
+                </div>
+                <div class="thumb-content" style="object-fit: contain;">
+                  <div class="button-group">
+                    <button type="button" class="btn btn-primary" @click="redirectToDetailsPage(item.client_slug)"
+                      style=" width: 85px; height: 35px; margin-right: 5px; margin-bottom: 2;"> Lihat</button>
+                    <button type="button" class="btn btn-info" @click="redirectToRegisterPage(item.client_slug)"
+                      style=" width: 85px; height: 35px; margin-bottom: 2;"> Daftar</button>
+                  </div>
+                  <h4 style="display: block">{{ item.client_name }}</h4>
+                  <p class="item-price"><!-- <strike>Rm 500.00</strike> -->Harga Yuran sekitar <br />
+                    <strong> RM {{ item.client_fee }}.00</strong>
+                  </p>
 
-              <div class="buttons">
-                <button class="btn see-more" @click="redirectToDetailsPage(item.client_slug)">Details</button>
-                <button class="btn register" style="margin-left: 20px;" @click="redirectToRegisterPage(item.client_slug)">Register</button>
-              </div>
-
-              <div class="thumb-content" style="object-fit: contain;">
-                <h4 style="display: block">{{item.client_name}}</h4>
-                <p class="item-price">Harga Yuran sekitar <br/>
-                <strong>{{ item.client_fee !== null ? 'RM' + item.client_fee : 'RM -' }}</strong></p>
-              </div>
+                </div>
+              <!-- </div> -->
             </div>
-        </div> -->
           </div>
 
           <div class="swiper-pagination" style="text-align: center;"></div>
@@ -60,13 +60,16 @@
       </div>
 
     </div><!--pengakhiran senarai tadika-->
+    
 
     <section id="feature-anak2u" class="feature feature-1 text-center bg-white pb-90" style="position:relative;">
       <div class="custom-shape-divider-top-1699878859">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-    </svg>
-</div>
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            class="shape-fill"></path>
+        </svg>
+      </div>
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12">
@@ -184,10 +187,12 @@
       <!-- .container end -->
 
       <div class="custom-shape-divider-bottom-1699878312">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-    </svg>
-</div>
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"></path>
+        </svg>
+      </div>
     </section>
 
 
@@ -259,67 +264,52 @@
     <!-- .feature end -->
 
     <section id="city-property" class="city-property text-center pb-70">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="heading heading-2 text-center mb-70">
-          <h2 class="heading--title">Tadika dan Taska Mengikut Negeri</h2>
-          <p class="heading--desc">Tadika dan taska mengikut negeri</p>
-        </div>
-        <!-- .heading-title end -->
-      </div>
-      <!-- .col-md-12 end -->
-    </div>
-    <!-- .row end -->
-    <div class="row">
-      <!-- City #1 -->
-      <!-- <div class="col-xs-12 col-sm-4 col-md-4" *ngFor="let state of states">
-        <div class="property-city-item">
-          <div class="property--city-img">
-            <a href="/negeri/{{state.slug}}">
-                <img [src]="state.image" alt="Carian Tadika Taska " class="img-responsive" style="object-fit: cover; height: 270px; width: 100%">
-              <div class="property--city-overlay">
-                <div class="property--item-content">
-                  <h5 class="property--title">{{state.city}}</h5>
-                  <p class="property--numbers">{{state.number}} Tadika/Taska</p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      
-      </div> -->
-      <div class="swiper-container-negeri d-flex justify-content-end " id="carousel">
-          <div class="swiper-wrapper">
-            <div v-for="(state, index) in states" :key="index" class="swiper-slide" style="height: 50vh;width: 220px;" >
-   
-              <div class="property-city-item">
-          <div class="property--city-img">
-            <!-- <a href="/negeri/{{state.slug}}"> -->
-                <img :src="state.image || defaultLogoUrl" alt="Carian Tadika Taska " class="img-responsive" style="object-fit: cover; height: 50vh; width: 100%;margin: 0;">
-              <div class="property--city-overlay">
-                <div class="property--item-content">
-                  <h5 class="property--title">{{state.city}}</h5>
-                  <p class="property--numbers">{{state.number}} Tadika/Taska</p>
-                </div>
-              </div>
-            <!-- </a> -->
-          </div>
-          <!-- .property-city-img end -->
-        </div>
-        <!-- . property-city-item end -->
-    
-        
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="heading heading-2 text-center mb-70">
+              <h2 class="heading--title">Tadika dan Taska Mengikut Negeri</h2>
+              <p class="heading--desc">Tadika dan taska mengikut negeri</p>
             </div>
+            <!-- .heading-title end -->
           </div>
-
-          <div class="swiper-pagination" style="text-align: center;"></div>
+          <!-- .col-md-12 end -->
         </div>
-    </div>
-    <!-- .row end -->
-  </div>
-  <!-- .container end -->
-</section>
+        <!-- .row end -->
+        <div class="row d-flex justify-content-center">
+
+          <div class="swiper-container-negeri d-flex justify-content-center " id="carousel">
+            <div class="swiper-wrapper">
+              <div v-for="(state, index) in states" :key="index" class="swiper-slide" style="height: 50vh;width: 220px;">
+
+                <div class="property-city-item">
+                  <div class="property--city-img">
+                    <a :href="'/negeri/' + state.slug">
+                      <img :src="state.image || defaultLogoUrl" alt="Carian Tadika Taska " class="img-responsive"
+                        style="object-fit: cover; height: 50vh; width: 100%;margin: 0;">
+                      <div class="property--city-overlay">
+                        <div class="property--item-content">
+                          <h5 class="property--title">{{ state.city }}</h5>
+                          <p class="property--numbers">{{ state.number }} Tadika/Taska</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- .property-city-img end -->
+                </div>
+                <!-- . property-city-item end -->
+
+
+              </div>
+            </div>
+
+            <div class="swiper-pagination" style="text-align: center;"></div>
+          </div>
+        </div>
+        <!-- .row end -->
+      </div>
+      <!-- .container end -->
+    </section>
 
 
 
@@ -360,8 +350,9 @@ export default {
   },
   methods: {
     async initCarousel() {
-      const response = await fetch('https://api-explore.anak2u.com.my/api/clients-filter?category_id=1');
+      const response = await fetch('https://api-explore.anak2u.com.my/api/clients/category/tadika');
       this.items = await response.json();
+      console.log("tadika list is", this.items.data)
       this.initializeSwiper();
     },
 
@@ -404,7 +395,7 @@ export default {
 
       this.swiper = new Swiper(".swiper-container-negeri", {
         slidesPerView: 1,
-        spaceBetween: 10,
+        spaceBetween: 40,
         slidesPerGroup: 3,
         // direction:'vertical',
         pagination: {
@@ -484,12 +475,20 @@ p {
 
 .thumb-wrapper {
   display: flex;
-  margin-top: 5px;
+  flex-direction: column;
+  /* margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 10px; */
   align-items: center;
+  text-wrap: wrap;
 
+
+}
+
+.thumb-wrapper  h4 {
+	font-size: 18px;
+  color: #FFFFFF;
 }
 
 img {
@@ -509,7 +508,7 @@ img {
   margin: 10px;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
 }
 
@@ -533,7 +532,7 @@ img {
 }
 
 /* Hide the numbers in pagination */
- .swiper-pagination-bullet {
+.swiper-pagination-bullet {
   font-size: 0;
   background: black;
   width: 10px;
@@ -730,51 +729,123 @@ img {
 .tittle-kaedah {
   font-family: 'Patua One', serif;
 }
+
 .custom-shape-divider-bottom-1699878312 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
 .custom-shape-divider-bottom-1699878312 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 104px;
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 104px;
 }
 
 .custom-shape-divider-bottom-1699878312 .shape-fill {
-    fill: rgb(241, 246, 252);;
+  fill: rgb(241, 246, 252);
+  ;
 }
 
 .custom-shape-divider-top-1699878859 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
 .custom-shape-divider-top-1699878859 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 50px;
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px;
 }
 
 .custom-shape-divider-top-1699878859 .shape-fill {
-    fill: #F1F6FC;
+  fill: #F1F6FC;
 }
 
-.negeri{
+.negeri {
   background-color: #007aff;
   height: 30vh;
   width: 30vw;
+}
+
+.thumb-wrapper {
+  padding: 25px 15px;
+  /* background: #fff; */
+  background: linear-gradient(to bottom, white 50%, #eb5a8c 50%);
+  border-radius: 6px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 2px 3px #FFFFFF;
+}
+
+.img-box {
+  height: 100px;
+  /* margin-bottom: 20px; */
+  width: 100%;
+  position: relative;
+}
+
+.img-box img {
+  /* max-width: 100%;
+  max-height: 100%; */
+  width: 50%;
+  display: inline-block;
+  position: absolute;
+  /* top: 40%; */
+  bottom: 0;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.thumb-content .btn {
+  color: #7ac400;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: none;
+  border: 1px solid #7ac400;
+  padding: 6px 14px;
+  margin-top: 5px;
+  line-height: 16px;
+  border-radius: 20px;
+}
+
+.thumb-content h4{
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #FFFFFF;
+}
+
+.thumb-content p{
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.swipper-slide{
+  width: 250px !important;
+  margin: 0 !important;
+  background: linear-gradient(to bottom, white 50%, #eb5a8c 50%);
+
+}
+
+.swiper-slide[data-v-9ea40744] {
+  margin: 0 !important;
+  margin-left: 5px !important;
+}
+
+.thumb-wrapper p{
+  color: #FFFFFF;
 }
 </style>

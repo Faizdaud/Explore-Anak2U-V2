@@ -20,6 +20,12 @@
     </section>
     <div class="banner">
 
+      <div class="text-center" style="display: flex; justify-content: center;">
+              <h1 class="banner-title">
+                Cari Tadika dan Taska Anda Sekarang
+              </h1>
+      </div>
+
       <div id="result">
         <!-- Result will be displayed here -->
         <!-- <p v-if="selectedState">Selected State ID: {{ selectedState }}</p> -->
@@ -223,4 +229,21 @@ button {
 
 .custom-shape-divider-bottom-1699832510 .shape-fill {
   fill: #F1F6FC;
-}</style>
+}
+
+.banner-title{
+  width: 300px;
+  font-size: 50px;
+  -webkit-text-stroke: 1px black;
+  color: white;
+  text-shadow:
+  3px 3px 0 #000,
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  margin-top: 10rem;
+  text-wrap: wrap;
+
+}
+</style>
