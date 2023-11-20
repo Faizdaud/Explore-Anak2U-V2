@@ -6,7 +6,7 @@
       <div class="image-container2">
         <!-- <h4 class="combined-heading">SENARAI TADIKA <span class="pilihan">PILIHAN ANAK2U</span></h4> -->
         <h2>Senarai Tadika<b> Pilihan Anak2u</b></h2>
-        <p class="huraian">Senarai tadika yang berdaftar dengan Kami</p>
+        <p class="huraian" style="margin-bottom: 2rem;" >Senarai tadika yang berdaftar dengan Kami</p>
       </div>
       <div class=" d-flex justify-content-center">
         <div class="swiper-container d-flex justify-content-center" id="carousel">
@@ -196,7 +196,7 @@
     </section>
 
 
-    <section id="feature" class="feature feature-1 text-center pb-90" style="background-color:#f1f6fc">
+    <section id="feature" class="feature feature-1 text-center pb-90" style="background-color:#f1f6fc; position: relative !important;">
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12">
@@ -259,11 +259,16 @@
 
       </div>
       <!-- .container end -->
-
+      <div class="custom-shape-divider-bottom-1700455868">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
+</div>
     </section>
     <!-- .feature end -->
 
-    <section id="city-property" class="city-property text-center pb-70">
+    <section id="city-property" class="city-property text-center pb-70" style="position: relative !important;">
+
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12">
@@ -304,11 +309,13 @@
             </div>
 
             <div class="swiper-pagination" style="text-align: center;"></div>
+            
           </div>
         </div>
         <!-- .row end -->
       </div>
       <!-- .container end -->
+
     </section>
 
 
@@ -847,5 +854,26 @@ img {
 
 .thumb-wrapper p{
   color: #FFFFFF;
+}
+
+.custom-shape-divider-bottom-1700455868 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1700455868 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 70px;
+}
+
+.custom-shape-divider-bottom-1700455868 .shape-fill {
+    fill: #FFFFFF;
 }
 </style>
