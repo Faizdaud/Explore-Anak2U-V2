@@ -325,6 +325,10 @@ iframe {
   font-size: 14px;
 }
 
+.info{
+  padding-top: 0px;
+}
+
 .info .row {
   display: flex;
   flex-wrap: wrap;
