@@ -5,7 +5,10 @@
 
       <div class="image-container2">
         <!-- <h4 class="combined-heading">SENARAI TADIKA <span class="pilihan">PILIHAN ANAK2U</span></h4> -->
-        <h2>Senarai Tadika<b> Pilihan Anak2u</b></h2>
+        <!-- <h2>Senarai Tadika<b> Pilihan Anak2u</b></h2> -->
+        <h2 class="heading--title">Apa itu Tadika Taska <b>Pilihan Anak2U?</b></h2>
+        <img src="@/assets/line-hijau.png" alt="Image 2" style="width:
+        10% !important; height:auto !important;">
         <p class="huraian" style="margin-bottom: 2rem;" >Senarai tadika yang berdaftar dengan Kami</p>
       </div>
       <div class=" d-flex justify-content-center">
@@ -75,6 +78,7 @@
           <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="heading heading-2 text-center mb-70">
               <h2 class="heading--title">Apa itu Tadika Taska Pilihan Anak2U?</h2>
+              <img src="@/assets/line-hijau.png" alt="Image 2" style="width:10% !important; height:auto !important;">
               <p class="heading--desc">Tadika pilihan Anak2U menggunakan aplikasi dan sistem pengurusan Anak2U. Aplikasi
                 dan sistem kami membolehkan ibu-bapa mempunyai akses ke:</p>
             </div>
@@ -202,6 +206,7 @@
           <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="heading heading-2 text-center mb-70">
               <h2 class="heading--title">Kaedah Penggunaan</h2>
+              <img src="@/assets/line-pink.png" alt="Image 2" style="width:10% !important; height:auto !important;">
               <p class="heading--desc">Terdapat 3 kaedah penggunaan sepertimana di bawah:</p>
             </div>
             <!-- .heading-title end -->
@@ -434,6 +439,10 @@ p {
   margin: 0;
   padding: 0;
 
+}
+
+.heading-2 .heading--title {
+  margin-bottom: 0;
 }
 
 .senarai-tadika-container {
