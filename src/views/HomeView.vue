@@ -504,7 +504,7 @@ img {
   width: 100px;
   /* Smaller image width */
   height: 100px;
-  margin-left: 25%;
+  /* margin-left: 25%; */
   align-items: center;
 }
 
